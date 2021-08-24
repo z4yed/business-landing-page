@@ -1,0 +1,234 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+/* Nav styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    margin-left: 30px;
+}
+
+nav > ul li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#nav-links li:hover a{
+    display: inline-block;
+    transform: scale(1.1);
+}
+
+nav > ul a {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#demo-link {
+    padding: 8px 5px;
+    color: blue;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+#demo-link:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Hero Section Styles */
+#hero {
+    background: #2F70FE;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero::before {
+    content: 'Hello';
+    height: 100px;
+    clip-path: polygon(100% 50%, 0 100%, 100% 100%);
+
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background: white;
+}
+
+#hero-description {
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 0px;
+    color: white;
+}
+
+#hero p {
+    color: white;
+}
+
+#register-button {
+    margin-top: 10px;
+    padding: 12px 50px;
+    color: white;
+    background: black;
+    border: 0;
+    font-weight: 800;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#hero-left-image {
+    position: absolute;
+    top: calc(100vh - 270px);
+    left: 10%;
+}
+
+#hero-right-image {
+    position: absolute;
+    right: 5%;
+    top: calc(100vh - 350px);
+}
+
+/* List Sell Glow Section Styles */
+
+#list-sell-glow {
+    background: url(images/list.png), url(images/list.png);
+    background-position: 4% 90%, 96% 5%;
+    background-repeat: no-repeat, no-repeat;
+    background-color: rgba(167, 192, 180, 0.08);
+}
+
+
+.section-title {
+    margin: 0;
+    padding:50px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.section-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15%;
+}
+
+.section-details div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-details p {
+    text-align: center;
+}
+
+/* Common Section Styles */
+.section-container {
+    padding: 60px 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-image {
+    width: 50%;
+    text-align: center;
+}
+
+footer {
+    padding: 4% 8% 0%;
+    background: black;
+}
+
+#footer-links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+footer h5 {
+    color: white;
+    margin-top: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: rgb(187, 174, 174);
+}
+footer ul li:hover a {
+    text-decoration: underline;
+    color: rgb(20, 238, 172);
+}
+
+#copyright {
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+}
+
+/* Responsiveness */
+@media only screen and (max-width:992px) {
+    
+    nav, #hero-left-image, #hero-right-image {
+        display: none;
+    }
+
+    #hero h1 {
+        font-size: 30px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .section-details {
+        flex-wrap: wrap;
+    }
+    .section-container {
+        flex-direction: column;
+    }
+    .section-text {
+        width: 100%;
+    }
+    .section-image {
+        width: 100%;
+    }
+    .section-image img {
+        width: 100%;
+    }
+    #footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
